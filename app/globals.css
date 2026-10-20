@@ -1,33 +1,43 @@
 @import "tailwindcss";
-
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
 @theme {
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
-  --color-background: oklch(1 0 0);
-  --color-foreground: oklch(0.145 0 0);
-  --color-card: oklch(1 0 0);
-  --color-card-foreground: oklch(0.145 0 0);
-  --color-primary: oklch(0.205 0 0);
-  --color-primary-foreground: oklch(0.985 0 0);
-  --color-secondary: oklch(0.97 0 0);
-  --color-secondary-foreground: oklch(0.205 0 0);
-  --color-muted: oklch(0.97 0 0);
-  --color-muted-foreground: oklch(0.556 0 0);
-  --color-accent: oklch(0.97 0 0);
-  --color-accent-foreground: oklch(0.205 0 0);
-  --color-destructive: oklch(0.577 0.245 27.325);
-  --color-border: oklch(0.922 0 0);
-  --color-input: oklch(0.922 0 0);
-  --color-ring: oklch(0.708 0 0);
-  --radius: 0.5rem;
+  --font-sans: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --color-background: #F4F6F3;
+  --color-foreground: #18251F;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #18251F;
+  --color-primary: #216147;
+  --color-primary-foreground: #FFFFFF;
+  --color-secondary: #FFFFFF;
+  --color-secondary-foreground: #18251F;
+  --color-muted: #edf1eb;
+  --color-muted-foreground: #18251F;
+  --color-accent: #eaf2ec;
+  --color-accent-foreground: #216147;
+  --color-destructive: #B42318;
+  --color-destructive-foreground: #FFFFFF;
+  --color-border: #CCD5CF;
+  --color-input: #87948b;
+  --color-ring: #216147;
+  --radius: 0.25rem;
 }
-
 @layer base {
-  * {
-    border-color: var(--color-border);
+  :root {
+    --ledger-date-width: 106px;
+    --ledger-category-width: 160px;
+    --ledger-amount-width: 208px;
+    --ledger-actions-width: 164px;
   }
-  body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
-  }
+  * { border-color: var(--color-border); }
+  body { @apply bg-background text-foreground font-sans antialiased; }
+  button, input { font: inherit; }
+  button { @apply cursor-pointer; }
+  button:disabled { @apply cursor-wait; }
+  ::selection { @apply bg-primary/15; }
+  :focus-visible { @apply outline-2 outline-primary outline-offset-4; }
 }

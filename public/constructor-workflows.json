@@ -1,0 +1,1 @@
+{"version":1,"workflows":[{"id":"actualizar","name":"Actualizar","description":"Consultar gastos y total global sin modificar datos.","endpoint":"/api/gastos","method":"GET","input":{"q":""}}]}

@@ -1,0 +1,13 @@
+{
+  "tone": "professional",
+  "fontBody": "Geist",
+  "logoText": "Gastos AWS API",
+  "textColor": "#202923",
+  "accentColor": "#246344",
+  "fontHeading": "Geist",
+  "borderRadius": "0.25rem",
+  "logoImageUrl": "https://vabacntbfcwhgkjqajcw.supabase.co/storage/v1/object/public/screenshots/projects/P-CRUCZU/logo.png",
+  "primaryColor": "#F6F7F3",
+  "secondaryColor": "#FFFFFF",
+  "backgroundColor": "#F6F7F3"
+}
